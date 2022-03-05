@@ -1,102 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Your description goes here" />
-    <meta
-      name="keywords"
-      content="full stack developer, web design, web development"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <meta name="description" content="Your description goes here" />
+        <meta name="keywords" content="full stack developer, web design, web development" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thalia Tech</title>
 
-    <title>Thalia Tech</title>
-
-    <!-- external CSS link -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              chinarose: "#58020F",
-              chinamid: "#6F0100",
-              chinalight: "#9F1A1D",
-              chinablack: "#3F010B",
-              logo: "#46111A",
-            },
-            height: {
-              150: "10rem",
-            },
-          },
-        },
-      };
-    </script>
-  </head>
-  <body>
-    <main class="bg-gradient-to-r from-stone-900 to-chinablack relative">
-     
-      <video
-        autoplay
-        muted
-        loop
-        class="bg-center object-cover blur-sm opacity-10 w-screen absolute"
-        id="headerBackground h-150"
-      >
-        <source
-          src="/ThaliaTech/Assets/production ID_4115790.mp4"
-          type="video/mp4"
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400&display=swap"
+            rel="stylesheet"
         />
-      </video>
-	  <nav class="relative flex justify-between py-5 px-7">
-        <div class="h-16 w-16"> <svg class = "fill-white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				 viewBox="0 0 96.7 94.9" style="enable-background:new 0 0 96.7 94.9;" xml:space="preserve">
-			<g id="_x39_f432f3e-7fb3-43b9-90c7-e15ce1a0167c" transform="matrix(1.0041393953668634,0,0,1.0041393953668634,160.97855823737012,-5.023155777113779)">
-				<path d="M-92.1,62.2c0,5.5-2.3,10.9-6.6,15.2c-5.4,5.4-13.4,8.5-21.9,8.5c-6.9,0-16.7-2.9-25.1-10.1c-1.1-1-2.6-1.5-4.1-1.5
-					c-3.5,0-6.3,2.8-6.3,6.3c0,1.7,0.7,3.2,1.8,4.4c0.9,0.9,1.9,1.7,3,2.5c11.6,9,24.8,9.7,28.5,9.7c12.8,0,23.6-4,31.1-11.5
-					c8-8,10.8-18.1,10.8-24.9c0-7.9-2.9-15.3-7.8-20.3c-3.8-3.8-8.7-5.9-13.6-5.9c-5.2,0-10.1,2-13.6,5.5c-1,1-1.8,2.1-2.6,3.2
-					c1.9-1.2,4.2-1.8,6.7-1.8C-100.9,41.3-92.1,50.7-92.1,62.2z"/>
-				<path d="M-102.3,32.2c5.5,0,10.9,2.3,15.2,6.6c5.4,5.4,8.5,13.4,8.5,21.9c0,6.9-2.9,16.7-10.1,25.1c-2.3,2.6-2,6.6,0.6,8.8
-					c1.1,1,2.6,1.5,4.1,1.5c1.7,0,3.3-0.7,4.4-1.8c0.9-0.9,1.7-1.9,2.5-3c9-11.6,9.7-24.8,9.7-28.5c0-12.8-4-23.6-11.5-31.1
-					c-8-8-18.1-10.8-24.9-10.8c-7.9,0-15.3,2.9-20.3,7.8c-3.8,3.8-5.9,8.7-5.9,13.6c0,5.2,2,10.1,5.5,13.6c1,1,2.1,1.8,3.2,2.6
-					c-1.2-1.9-1.8-4.2-1.8-6.7C-123.1,41-113.8,32.2-102.3,32.2z"/>
-				<path d="M-132.2,42.3c0-5.5,2.3-10.9,6.6-15.2c5.4-5.4,13.4-8.5,21.9-8.5c6.9,0,16.7,2.9,25.1,10.1c2.6,2.3,6.6,2,8.8-0.6
-					c1-1.1,1.5-2.6,1.5-4.1c0-1.7-0.7-3.3-1.8-4.4c-0.9-0.9-1.9-1.7-3-2.5c-11.6-9-24.8-9.7-28.5-9.7c-12.8,0-23.6,4-31.1,11.5
-					c-8,8-10.8,18.1-10.8,24.9c0,7.9,2.9,15.3,7.8,20.3c3.8,3.8,8.7,5.9,13.6,5.9c5.2,0,10.1-2,13.6-5.5c1-1,1.8-2.1,2.6-3.2
-					c-1.9,1.2-4.2,1.8-6.7,1.8C-123.5,63.2-132.2,53.8-132.2,42.3z"/>
-				<path d="M-122.1,72.3c-5.5,0-10.9-2.3-15.2-6.6c-5.4-5.4-8.5-13.4-8.5-21.9c0-6.9,2.9-16.7,10.1-25.1c1-1.1,1.5-2.6,1.5-4.1
-					c0-3.5-2.8-6.3-6.3-6.3c-1.7,0-3.2,0.6-4.4,1.8c-0.9,0.9-1.7,2-2.5,3c-9,11.6-9.7,24.8-9.7,28.5c0,12.8,4,23.6,11.5,31.1
-					c8,8,18.1,10.8,24.9,10.8c7.9,0,15.3-2.9,20.3-7.8c3.8-3.8,5.9-8.7,5.9-13.6c0-5.2-2-10.1-5.5-13.6c-1-1-2.1-1.8-3.2-2.6
-					c1.2,1.9,1.8,4.2,1.8,6.7C-101.2,63.5-110.6,72.3-122.1,72.3L-122.1,72.3z"/>
-			</g>
-			</svg>
-			
-			
-		</div>
-        <div>
-          <ul class="flex justify-between pt-3">
-            <li><a class= "align-middle px-2 text-xl font-sans text-white" href="#">PROJECTS</a></li>
-            <li class= "align-middle"><a class= "align-middle px-2 text-xl font-sans text-white" href="#">CONTACT</a></li>
-          </ul>
-        </div>
-      </nav>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    fontFamily: {
+                        lato: ['Lato', 'sans-serif'],
+                    },
+                    extend: {
+                        colors: {
+                            chinarose: '#58020F',
+                            chinamid: '#6F0100',
+                            chinalight: '#9F1A1D',
+                            chinablack: '#3F010B',
+                            logo: '#46111A',
+                            chinaplum:'#3B0D34',
+                            chinaredplum:'#360a11',
+                            probono:'#d8b4ba',
+                            chinatrans: '#7c282631', 
+                        },
+                    },
+                    
+                    screens: {
+                        xs: '340px',
+                        sm: '640px',
+                        md: '768px',
+                        lg: '1024px',
+                        xl: '1280px',
+                        '2xl': '1536px',
+                    },
+                },
+            }
+        </script>
+    </head>
+    <body class="font-lato">
 
-      <section class="mt-20 relative pl-60">
-        <h1
-          class="text-center font-medium pt-20 text-8xl w-1/5 font-sans text-white pb-10"
-        >
-          Reach The World
-        </h1>
-        <p class="font-sans text-white">
-          Whether you need a website to stay in touch with your audience, or an
-          app to improve your workflow, we offer effective and creative
-          solutions
-        </p>
-      </section>
-    </main>
+        <!-- VIDEO AND NAV -->
 
-    <script type="text/javascript" src="js/main.js"></script>
-  </body>
+        <video src="/Assets/typing.mp4" autoplay loop muted class="fixed top-0 left-0 bottom-0 right-0 w-screen min-h-screen object-cover"></video>
+        <div
+            class="overlay fixed z-9 top-0 left-0 bottom-0 right-0 bg-chinablack sm:bg-gradient-to-r sm:from-stone-900 sm:to-chinaredplum opacity-90"
+        ></div>
+
+        <header class="relative h-22 p-3">
+            <nav class="flex justify-between">
+                <a href="#">
+                    <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 96.7 94.9"
+                        style="enable-background: new 0 0 96.7 94.9"
+                        xml:space="preserve"
+                        class="h-16 w-16 fill-white"
+                    >
+                        <g
+                            id="_x39_f432f3e-7fb3-43b9-90c7-e15ce1a0167c"
+                            transform="matrix(1.0041393953668634,0,0,1.0041393953668634,160.97855823737012,-5.023155777113779)"
+                        >
+                            <path
+                                d="M-92.1,62.2c0,5.5-2.3,10.9-6.6,15.2c-5.4,5.4-13.4,8.5-21.9,8.5c-6.9,0-16.7-2.9-25.1-10.1c-1.1-1-2.6-1.5-4.1-1.5
+		c-3.5,0-6.3,2.8-6.3,6.3c0,1.7,0.7,3.2,1.8,4.4c0.9,0.9,1.9,1.7,3,2.5c11.6,9,24.8,9.7,28.5,9.7c12.8,0,23.6-4,31.1-11.5
+		c8-8,10.8-18.1,10.8-24.9c0-7.9-2.9-15.3-7.8-20.3c-3.8-3.8-8.7-5.9-13.6-5.9c-5.2,0-10.1,2-13.6,5.5c-1,1-1.8,2.1-2.6,3.2
+		c1.9-1.2,4.2-1.8,6.7-1.8C-100.9,41.3-92.1,50.7-92.1,62.2z"
+                            />
+                            <path
+                                d="M-102.3,32.2c5.5,0,10.9,2.3,15.2,6.6c5.4,5.4,8.5,13.4,8.5,21.9c0,6.9-2.9,16.7-10.1,25.1c-2.3,2.6-2,6.6,0.6,8.8
+		c1.1,1,2.6,1.5,4.1,1.5c1.7,0,3.3-0.7,4.4-1.8c0.9-0.9,1.7-1.9,2.5-3c9-11.6,9.7-24.8,9.7-28.5c0-12.8-4-23.6-11.5-31.1
+		c-8-8-18.1-10.8-24.9-10.8c-7.9,0-15.3,2.9-20.3,7.8c-3.8,3.8-5.9,8.7-5.9,13.6c0,5.2,2,10.1,5.5,13.6c1,1,2.1,1.8,3.2,2.6
+		c-1.2-1.9-1.8-4.2-1.8-6.7C-123.1,41-113.8,32.2-102.3,32.2z"
+                            />
+                            <path
+                                d="M-132.2,42.3c0-5.5,2.3-10.9,6.6-15.2c5.4-5.4,13.4-8.5,21.9-8.5c6.9,0,16.7,2.9,25.1,10.1c2.6,2.3,6.6,2,8.8-0.6
+		c1-1.1,1.5-2.6,1.5-4.1c0-1.7-0.7-3.3-1.8-4.4c-0.9-0.9-1.9-1.7-3-2.5c-11.6-9-24.8-9.7-28.5-9.7c-12.8,0-23.6,4-31.1,11.5
+		c-8,8-10.8,18.1-10.8,24.9c0,7.9,2.9,15.3,7.8,20.3c3.8,3.8,8.7,5.9,13.6,5.9c5.2,0,10.1-2,13.6-5.5c1-1,1.8-2.1,2.6-3.2
+		c-1.9,1.2-4.2,1.8-6.7,1.8C-123.5,63.2-132.2,53.8-132.2,42.3z"
+                            />
+                            <path
+                                d="M-122.1,72.3c-5.5,0-10.9-2.3-15.2-6.6c-5.4-5.4-8.5-13.4-8.5-21.9c0-6.9,2.9-16.7,10.1-25.1c1-1.1,1.5-2.6,1.5-4.1
+		c0-3.5-2.8-6.3-6.3-6.3c-1.7,0-3.2,0.6-4.4,1.8c-0.9,0.9-1.7,2-2.5,3c-9,11.6-9.7,24.8-9.7,28.5c0,12.8,4,23.6,11.5,31.1
+		c8,8,18.1,10.8,24.9,10.8c7.9,0,15.3-2.9,20.3-7.8c3.8-3.8,5.9-8.7,5.9-13.6c0-5.2-2-10.1-5.5-13.6c-1-1-2.1-1.8-3.2-2.6
+		c1.2,1.9,1.8,4.2,1.8,6.7C-101.2,63.5-110.6,72.3-122.1,72.3L-122.1,72.3z"
+                            />
+                        </g>
+                    </svg>
+                </a>
+                <ul class="flex text-white text-lg font-medium items-center">
+                    <li>
+                        <a href="#websites" class="p-3 inline-block">PROJECTS</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="p-3 inline-block">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- MAIN TEXT -->
+
+        <section class="flex justify-center items-center w-full relative">
+            <div class="w-96 text-center relative text-white pt-20 pb-40 2xl:pb-60 px-3">
+                <h1 class="font-lato text-5xl xs:text-6xl pb-10 font-medium">Reach The World</h1>
+
+                <p class="text-lg font-medium leading-10 bg-white/10 rounded-md mt-3 p-3">
+                    Whether you need a website to stay in touch with your audience, or an app to improve your workflow, we offer effective and
+                    creative solutions
+                </p>
+
+                <!-- <a
+                    href="mailto:thalia@thalia.tech?subject=Website Request&body=Hello, my name is [   ] and I/my company need(s) a website. The main purpose of the website will be [          ]       (i.e sell products, display event calendar, marketing/stay in touch with our customer base. My budget is [    ]"
+                    target="_blank"
+                    >I need a website</a
+                >
+                <a href="#">I need an app</a> -->
+            </div>
+        </section>
+
+        <!-- MOBILE FIRST -->
+
+        <section class="bg-white w-full text-center py-24 text-stone-700 relative">
+            <h2 class="text-4xl pb-20 text-center px-10">Mobile First Design</h2>
+            <section class="md:flex justify-center items-center md:gap-20">
+                <video src="/Assets/scrolling.mp4" class="h-96 hidden md:block md:pl-4" autoplay loop muted> </video>
+                <p class="pb-5 px-8 text-xl max-w-lg leading-8 md:leading-10 md:text-left md:pl-8 ">
+                Your customers search, browse and communicate on their mobile devices. We make sure visitors coming to your site have the same premium experience on every device, without compromising on speed, quality or appearance.</p>
+            </section>
+        </section>
+
+        <!-- SEE SAMPLES OF OUR WORK -->
+
+        <section class="bg-gradient-to-r from-stone-800 to-chinaredplum w-full text-center py-20 text-white relative ">
+            <h2 class="text-3xl pb-5 mb-7">See Samples Of Our Work</h2>
+            <a href="#websites" class="rounded bg-white text-chinablack px-5 py-4 hover:bg-gray-300 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 inline-block mr-2 font-semibold">WEBSITES</a>
+            <a href="#apps" class="rounded bg-white text-chinablack py-4 px-10  hover:bg-gray-300 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 inline-block ml-2 font-semibold">APPS</a>
+        </section>
+
+        <!-- WEBSITE SAMPLES -->
+
+        <section class="bg-white w-full relative py-10">
+            <h2 id="websites" class="pb-5 text-3xl mb-7 text-center text-chinablack">Websites</h2>
+            <section class ="imagecontainer text-center md:flex justify-center flex-wrap gap-20 md:px-20 lg:px-0  mb-10">
+                <section class="">
+                <img class="mx-auto" src="http://placekitten.com/200/300">
+                <a class= "button inline-block bg-chinablack text-white font- semibold rounded py-3 px-3 mt-2 mb-7 hover:bg-chinarose transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 md:mt-4" href="#"> VIEW DEMO </a>
+                </section>
+                <section>
+                    <img class="mx-auto" src="http://placekitten.com/200/300">
+                    <a href="#" class= "button inline-block bg-chinablack text-white font- semibold rounded py-3 px-3 mt-2 mb-7 hover:bg-chinarose transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 md:mt-4"> VIEW DEMO </a>
+                </section>
+                <section>
+                    <img class="mx-auto" src="http://placekitten.com/200/300">
+                    <a href="#" class= "button inline-block bg-chinablack text-white font- semibold rounded py-3 px-3 mt-2 mb-7 hover:bg-chinarose transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 md:mt-4"> VIEW DEMO </a>
+                </section>
+                <section>
+                    <img class="mx-auto" src="http://placekitten.com/200/300">
+                    <a href="#" class= "button inline-block bg-chinablack text-white font- semibold rounded py-3 px-3 mt-2 mb-7 hover:bg-chinarose transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 md:mt-4"> VIEW DEMO </a>
+                </section>
+            </section>
+
+            <!-- PRO BONO SAMPLES -->
+
+            <section class="probonocontainer text-center bg-stone-50 md:px-30 md:py-10">
+                <h3 class="pb-5 text-3xl mb-7 text-center text-chinablack pt-10">ProBono Work</h3>
+                <section class="md:flex justify-center gap-20 ">
+                    <section>
+                        <img class="mx-auto" src="http://placekitten.com/200/300">
+                        <a href="#" class= "button inline-block bg-chinablack text-white font- semibold rounded py-3 px-3 mt-2 mb-7 hover:bg-chinarose transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 md:mt-4"> VIEW DEMO </a>
+                    </section>
+
+                    <section>
+                        <img class="mx-auto" src="http://placekitten.com/200/300">
+                        <a href="#" class= "button inline-block bg-chinablack text-white font- semibold rounded py-3 px-3 mt-2 mb-7 hover:bg-chinarose transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 md:mt-4"> VIEW DEMO </a>
+                    </section>
+
+                 </section>
+            </section>
+        </section>
+
+        <!-- APPS SECTION -->
+
+        <section class="bg-white relative text-center pt-10 pb-20">
+            <h2 id="apps" class="text-3xl pb-10 text-center px-10 text-stone-700">APPS</h2>
+            <section class=" relative text-center md:px-20 md:text-left xl:flex justify-center xl:gap-20 mx-auto">
+                <section class="md:flex justify-between gap-20 pb-10 max-w-xl">
+                    <img class="mx-auto " width="200" height="300"  src="http://placekitten.com/200/300">
+                    <section class="sideonmid flex-1">
+                        <p class="py-5 px-8 md:px-0 text-lg  text-stone-700 leading-8 ">A custom made application enabling university students to connect with mentors. Students input their information and get matched with an appropriate mentor within academia.</p>
+                        <a href="#" class= "button inline-block bg-chinablack text-white font- semibold rounded py-3 px-3 mt-2 mb-7 hover:bg-chinarose transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 md:mt-4">
+                        VIEW DEMO </a>
+                    </section>
+                </section>
+
+                <section class="md:flex justify-between gap-20 pb-10 max-w-xl">
+                    <img class="mx-auto "  src="http://placekitten.com/200/300">
+                    <section class="sideonmid flex-1">
+                        <p class="py-5 px-8 md:px-0 text-lg  text-stone-700">A proprietary application for a mid-size film production company. It searches multiple repositories for sound-effect files, allowing the users to access them all in one place, saving precious time</p>
+                        <a href="#" class= "button inline-block bg-chinablack text-white font- semibold rounded py-3 px-3 mt-2 mb-7 hover:bg-chinarose transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 md:mt-4"> VIEW DEMO </a>
+                    </section>
+                </section>
+            </section>
+        </section>
+        
+        <!-- CONTACT FORM -->
+
+        <section id="contact" class="relative">
+            <h3 class="text-3xl py-10 text-center px-10 text-white">CONTACT</h3>
+            <div class="w-full md:w-96 md:max-w-full mx-auto">
+                <div class="p-6 border border-gray-300 sm:rounded-md">
+                  <form method="POST" action="https://thalia.tech">
+                    <label class="block mb-6">
+                      <span class="text-white">Your name</span>
+                      <input
+                        type="text"
+                        name="name"
+                        class="
+                          block
+                          w-full
+                          mt-1
+                          border-gray-300
+                          rounded-md
+                          shadow-sm
+                          focus:border-indigo-300
+                          focus:ring
+                          focus:ring-indigo-200
+                          focus:ring-opacity-50
+                        "
+                        placeholder="Name"
+                      />
+                    </label>
+                    <label class="block mb-6">
+                      <span class="text-white">Email address</span>
+                      <input
+                        name="email"
+                        type="email"
+                        class="
+                          block
+                          w-full
+                          mt-1
+                          border-gray-300
+                          rounded-md
+                          shadow-sm
+                          focus:border-indigo-300
+                          focus:ring
+                          focus:ring-indigo-200
+                          focus:ring-opacity-50
+                        "
+                        placeholder="youremail@example.com"
+                        required
+                      />
+                    </label>
+                    <label class="block mb-6">
+                      <span class="text-white">Message</span>
+                      <textarea
+                        name="message"
+                        class="
+                          block
+                          w-full
+                          mt-1
+                          border-gray-300
+                          rounded-md
+                          shadow-sm
+                          focus:border-indigo-300
+                          focus:ring
+                          focus:ring-indigo-200
+                          focus:ring-opacity-50
+                        "
+                        rows="3"
+                        placeholder="How can we help you?"
+                      ></textarea>
+                    </label>
+                    <div class="mb-6">
+                      <button
+                        type="submit"
+                        class="
+                          h-10
+                          px-5
+                          text-chinablack
+                          bg-white
+                          rounded
+                          transition-colors
+                          duration-150
+                          focus:shadow-outline
+                          hover:bg-chinatrans
+                          hover:text-white
+                        "
+                      >
+                        Contact Us
+                      </button>
+                    </div>
+                    
+                  </form>
+                </div>
+              </div>
+              
+        </section>
+
+    </body>
 </html>
